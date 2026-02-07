@@ -13,6 +13,8 @@ export interface MenuItem {
   description: string
   image: string
   alt: string
+  /** Public path to PDF menu (e.g. /menu/INDIAN VEG FOOD MENU.pdf) */
+  pdfPath?: string
 }
 
 export interface Testimonial {

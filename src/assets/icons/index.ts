@@ -1,6 +1,7 @@
 export { MenuIcon } from './MenuIcon'
 export { ChevronLeft } from './ChevronLeft'
 export { ChevronRight } from './ChevronRight'
+export { ChevronDown } from './ChevronDown'
 export { PlayIcon } from './PlayIcon'
 export { MailIcon } from './MailIcon'
 export { PhoneIcon } from './PhoneIcon'

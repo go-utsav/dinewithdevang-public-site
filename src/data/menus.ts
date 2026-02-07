@@ -9,6 +9,7 @@ export const menus: MenuItem[] = [
     description: "Authentic vegetarian dishes celebrating India's rich culinary heritage",
     image: IMAGES.menuVegetarian,
     alt: 'Indian Vegetarian Feasts',
+    pdfPath: '/menu/INDIAN VEG FOOD MENU.pdf',
   },
   {
     id: 'nonveg',
@@ -17,6 +18,7 @@ export const menus: MenuItem[] = [
     description: 'Premium meats prepared with aromatic spices and expert technique',
     image: IMAGES.menuNonveg,
     alt: 'Indian Non-Vegetarian Specialties',
+    pdfPath: '/menu/INDIAN NON VEG FOOD MENU.pdf',
   },
   {
     id: 'international',
@@ -25,5 +27,6 @@ export const menus: MenuItem[] = [
     description: 'World-class dishes from Mediterranean to contemporary fusion',
     image: IMAGES.menuInternational,
     alt: 'International Cuisine',
+    pdfPath: '/menu/INTERNATIONAL FOOD MENU.pdf',
   },
 ]

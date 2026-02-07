@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import { Header, Footer } from './components/layout'
+import { MenuPdfViewer } from './components/ui'
 import {
   Hero,
   MeetChef,
@@ -12,12 +14,21 @@ import {
 } from './components/sections'
 
 function App() {
+  const [openMenuPdf, setOpenMenuPdf] = useState<{ path: string; title: string } | null>(null)
+
   return (
     <>
       <a href="#main" className="sr-only sr-only-focusable">
         Skip to main content
       </a>
-      <Header />
+      {openMenuPdf && (
+        <MenuPdfViewer
+          pdfPath={openMenuPdf.path}
+          title={openMenuPdf.title}
+          onClose={() => setOpenMenuPdf(null)}
+        />
+      )}
+      <Header onOpenMenuPdf={(path, title) => setOpenMenuPdf({ path, title })} />
       <main id="main">
         <Hero />
         <MeetChef />
