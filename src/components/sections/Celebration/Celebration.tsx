@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { SectionLabel, SectionHeading } from '../../ui'
 import { ChevronLeft, ChevronRight } from '../../../assets/icons'
 import { events } from '../../../data'
@@ -30,12 +31,12 @@ export function Celebration() {
   }
 
   return (
-    <section className={`section ${styles.celebration}`} id="celebration">
+    <section className={`section ${styles.celebration}`} id="services">
       <div className="container">
         <div className={styles.header}>
           <div>
-            <SectionLabel>The Art of Celebration</SectionLabel>
-            <SectionHeading as="h2">The Art of Celebration</SectionHeading>
+            <SectionLabel>Our Services</SectionLabel>
+            <SectionHeading as="h2">Our Services</SectionHeading>
             <p className={styles.subtitle}>
               From intimate dinners to grand celebrations, we craft unforgettable culinary
               experiences tailored to your vision.
@@ -70,14 +71,16 @@ export function Celebration() {
         >
           {events.map((event) => (
             <article key={event.id} className={styles.card} role="listitem">
-              <div className={styles.cardImageWrap}>
-                <img src={event.image} alt={event.alt} className={styles.cardImage} />
-                <div className={styles.cardOverlay} />
-              </div>
-              <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>{event.title}</h3>
-                <p className={styles.cardDesc}>{event.description}</p>
-              </div>
+              <Link to={`/services/${event.slug}`} className={styles.cardLink}>
+                <div className={styles.cardImageWrap}>
+                  <img src={event.image} alt={event.alt} className={styles.cardImage} />
+                  <div className={styles.cardOverlay} />
+                </div>
+                <div className={styles.cardContent}>
+                  <h3 className={styles.cardTitle}>{event.title}</h3>
+                  <p className={styles.cardDesc}>{event.description}</p>
+                </div>
+              </Link>
             </article>
           ))}
         </div>

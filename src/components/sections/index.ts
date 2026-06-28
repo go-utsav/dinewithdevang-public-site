@@ -1,7 +1,5 @@
 export { Hero } from './Hero'
-export { MeetChef } from './MeetChef'
 export { Celebration } from './Celebration'
-export { Venues } from './Venues'
 export { Gallery } from './Gallery'
 export { Menus } from './Menus'
 export { Testimonials } from './Testimonials'

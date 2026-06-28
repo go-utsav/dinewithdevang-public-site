@@ -1,6 +1,6 @@
+import { Link } from 'react-router-dom'
 import { SectionLabel, SectionHeading } from '../../ui'
-import { Button } from '../../ui'
-import { IMAGES, siteConfig } from '../../../data'
+import { IMAGES } from '../../../data'
 import styles from './CtaBlock.module.css'
 
 export function CtaBlock() {
@@ -25,14 +25,9 @@ export function CtaBlock() {
           <p className={styles.subtitle}>
             Let&apos;s discuss your vision. Your custom menu is one click away.
           </p>
-          <Button
-            asChild
-            href={`mailto:${siteConfig.email}`}
-            variant="primary"
-            className={styles.btn}
-          >
+          <Link to="/contact" className={`btn btn-primary ${styles.btn}`}>
             Get Your Free Quote Today
-          </Button>
+          </Link>
         </div>
       </div>
     </section>

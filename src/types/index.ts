@@ -1,13 +1,21 @@
-export interface EventCard {
-  id: string
-  title: string
-  description: string
+export interface EventGalleryImage {
   image: string
   alt: string
 }
 
+export interface EventCard {
+  id: string
+  slug: string
+  title: string
+  description: string
+  image: string
+  alt: string
+  gallery?: EventGalleryImage[]
+}
+
 export interface MenuItem {
   id: string
+  slug: string
   tag: string
   title: string
   description: string
@@ -45,4 +53,8 @@ export interface SiteConfig {
   linkedIn: string
   brandName: string
   tagline: string
+}
+
+export interface MenuPdfContext {
+  openMenuPdf: (path: string, title: string) => void
 }

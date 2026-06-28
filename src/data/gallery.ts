@@ -4,7 +4,7 @@ import { IMAGES } from './images'
 export const galleryItems: GalleryItem[] = [
   { id: '1', image: IMAGES.heroChefPlating, alt: 'Chef plating gourmet dish' },
   { id: '2', image: IMAGES.eventPrivateDining, alt: 'Private dining setup' },
-  { id: '3', image: IMAGES.eventGardenBbq, alt: 'Garden BBQ party' },
+  { id: '3', image: IMAGES.bbqGrill01, alt: 'Chicken tikka and kebabs on the grill' },
   { id: '4', image: IMAGES.eventCanapes, alt: 'Elegant canapés' },
   { id: '5', image: IMAGES.menuVegetarian, alt: 'Vegetarian thali' },
   { id: '6', image: IMAGES.menuNonveg, alt: 'Lamb rack preparation' },

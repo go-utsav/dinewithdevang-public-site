@@ -4,6 +4,7 @@ import { IMAGES } from './images'
 export const menus: MenuItem[] = [
   {
     id: 'vegetarian',
+    slug: 'indian-vegetarian-feasts',
     tag: 'Traditional & Contemporary',
     title: 'Indian Vegetarian Feasts',
     description: "Authentic vegetarian dishes celebrating India's rich culinary heritage",
@@ -13,6 +14,7 @@ export const menus: MenuItem[] = [
   },
   {
     id: 'nonveg',
+    slug: 'indian-non-vegetarian-specialties',
     tag: 'Signature Creations',
     title: 'Indian Non-Vegetarian Specialties',
     description: 'Premium meats prepared with aromatic spices and expert technique',
@@ -22,6 +24,7 @@ export const menus: MenuItem[] = [
   },
   {
     id: 'international',
+    slug: 'international-cuisine',
     tag: 'Global Flavors',
     title: 'International Cuisine',
     description: 'World-class dishes from Mediterranean to contemporary fusion',
@@ -30,3 +33,7 @@ export const menus: MenuItem[] = [
     pdfPath: '/menu/INTERNATIONAL FOOD MENU.pdf',
   },
 ]
+
+export function getMenuBySlug(slug: string): MenuItem | undefined {
+  return menus.find((menu) => menu.slug === slug)
+}

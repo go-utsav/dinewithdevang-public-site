@@ -1,4 +1,4 @@
-.meetChef {
+.about {
   background: hsl(var(--background));
 }
 
@@ -24,8 +24,13 @@
   max-width: 36rem;
 }
 
-.name {
-  margin-bottom: 1rem;
+.subtitle {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+  margin: 0.75rem 0 1.25rem;
+  line-height: 1.4;
 }
 
 .bio {
@@ -43,14 +48,6 @@
   .grid {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
-  }
-
-  .imageWrap {
-    order: 0;
-  }
-
-  .content {
-    order: 1;
   }
 }
 

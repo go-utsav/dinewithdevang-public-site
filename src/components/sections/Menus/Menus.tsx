@@ -1,10 +1,14 @@
+import { Link } from 'react-router-dom'
 import { SectionLabel, SectionHeading, Button } from '../../ui'
-import { menus, siteConfig } from '../../../data'
+import { useMenuPdf } from '../../../hooks/useMenuPdf'
+import { menus } from '../../../data'
 import styles from './Menus.module.css'
 
 export function Menus() {
+  const { openMenuPdf } = useMenuPdf()
+
   return (
-    <section className={`section ${styles.menus}`} id="menus">
+    <section className={`section section-light ${styles.menus}`} id="menus">
       <div className="container">
         <div className={styles.header}>
           <SectionLabel>Our Menus</SectionLabel>
@@ -17,16 +21,27 @@ export function Menus() {
         <div className={styles.grid}>
           {menus.map((menu) => (
             <article key={menu.id} className={styles.card}>
-              <div className={styles.cardImageWrap}>
-                <img src={menu.image} alt={menu.alt} className={styles.cardImage} />
-              </div>
+              <Link to={`/menus/${menu.slug}`} className={styles.cardImageLink}>
+                <div className={styles.cardImageWrap}>
+                  <img src={menu.image} alt={menu.alt} className={styles.cardImage} />
+                </div>
+              </Link>
               <div className={styles.cardContent}>
                 <p className={styles.tag}>{menu.tag}</p>
                 <h3 className={styles.title}>{menu.title}</h3>
                 <p className={styles.desc}>{menu.description}</p>
-                <Button variant="outline" asChild href={`mailto:${siteConfig.email}?subject=Menu: ${menu.title}`}>
-                  View Menu
-                </Button>
+                {menu.pdfPath ? (
+                  <Button
+                    variant="outline"
+                    onClick={() => openMenuPdf(menu.pdfPath!, menu.title)}
+                  >
+                    View Menu
+                  </Button>
+                ) : (
+                  <Button variant="outline" asChild href={`/menus/${menu.slug}`}>
+                    View Menu
+                  </Button>
+                )}
               </div>
             </article>
           ))}

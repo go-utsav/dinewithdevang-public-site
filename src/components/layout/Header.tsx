@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { MenuIcon, ChevronDown } from '../../assets/icons'
 import { siteConfig, menus, events } from '../../data'
 import styles from './Header.module.css'
@@ -47,17 +48,57 @@ export function Header({ onOpenMenuPdf }: HeaderProps) {
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
-        <a href="#home" className={styles.logo} onClick={closeMenu}>
+        <Link to="/" className={styles.logo} onClick={closeMenu}>
           {siteConfig.brandName}
-        </a>
+        </Link>
         <nav
           ref={navRef}
           className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}
           aria-hidden={navAriaHidden}
         >
-          <a href="#home" className={styles.navLink} onClick={closeMenu}>
+          <Link to="/" className={styles.navLink} onClick={closeMenu}>
             Home
-          </a>
+          </Link>
+
+          <Link to="/about" className={styles.navLink} onClick={closeMenu}>
+            About Us
+          </Link>
+
+          <div className={styles.dropdownWrap}>
+            <button
+              type="button"
+              className={styles.navTrigger}
+              onClick={() => toggleDropdown('services')}
+              aria-expanded={dropdownOpen === 'services'}
+              aria-haspopup="true"
+              aria-controls="header-services"
+              id="header-services-trigger"
+            >
+              Services
+              <ChevronDown
+                className={`${styles.chevron} ${dropdownOpen === 'services' ? styles.chevronOpen : ''}`}
+              />
+            </button>
+            <div
+              id="header-services"
+              role="menu"
+              aria-labelledby="header-services-trigger"
+              className={`${styles.dropdown} ${dropdownOpen === 'services' ? styles.dropdownOpen : ''}`}
+            >
+              {events.map((event) => (
+                <Link
+                  key={event.id}
+                  to={`/services/${event.slug}`}
+                  role="menuitem"
+                  className={styles.dropdownItem}
+                  onClick={closeMenu}
+                >
+                  <span className={styles.dropdownItemTitle}>{event.title}</span>
+                  <span className={styles.dropdownItemDesc}>{event.description}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
 
           <div className={styles.dropdownWrap}>
             <button
@@ -95,59 +136,27 @@ export function Header({ onOpenMenuPdf }: HeaderProps) {
                     <span className={styles.dropdownItemTitle}>{menu.title}</span>
                   </button>
                 ) : (
-                  <a
+                  <Link
                     key={menu.id}
-                    href="#menus"
+                    to={`/menus/${menu.slug}`}
                     role="menuitem"
                     className={styles.dropdownItem}
                     onClick={closeMenu}
                   >
                     <span className={styles.dropdownItemTitle}>{menu.title}</span>
-                  </a>
+                  </Link>
                 )
               )}
             </div>
           </div>
 
-          <div className={styles.dropdownWrap}>
-            <button
-              type="button"
-              className={styles.navTrigger}
-              onClick={() => toggleDropdown('services')}
-              aria-expanded={dropdownOpen === 'services'}
-              aria-haspopup="true"
-              aria-controls="header-services"
-              id="header-services-trigger"
-            >
-              Services
-              <ChevronDown
-                className={`${styles.chevron} ${dropdownOpen === 'services' ? styles.chevronOpen : ''}`}
-              />
-            </button>
-            <div
-              id="header-services"
-              role="menu"
-              aria-labelledby="header-services-trigger"
-              className={`${styles.dropdown} ${dropdownOpen === 'services' ? styles.dropdownOpen : ''}`}
-            >
-              {events.map((event) => (
-                <a
-                  key={event.id}
-                  href="#celebration"
-                  role="menuitem"
-                  className={styles.dropdownItem}
-                  onClick={closeMenu}
-                >
-                  <span className={styles.dropdownItemTitle}>{event.title}</span>
-                  <span className={styles.dropdownItemDesc}>{event.description}</span>
-                </a>
-              ))}
-            </div>
-          </div>
+          <Link to="/gallery" className={styles.navLink} onClick={closeMenu}>
+            Gallery
+          </Link>
 
-          <a href="#contact" className={styles.navLink} onClick={closeMenu}>
+          <Link to="/contact" className={styles.navLink} onClick={closeMenu}>
             Contact
-          </a>
+          </Link>
         </nav>
         <button
           type="button"

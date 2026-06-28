@@ -1,0 +1,54 @@
+{
+  "generatedAt": "2026-06-28T20:04:45.035Z",
+  "picks": [
+    {
+      "out": "bbq-hero.jpg",
+      "clip": "IMG_2272",
+      "timeSec": 2.85,
+      "alt": "Garden BBQ setup under white marquee",
+      "publicPath": "/images/bbq/bbq-hero.jpg"
+    },
+    {
+      "out": "bbq-grill-01.jpg",
+      "clip": "IMG_2307",
+      "timeSec": 11.68,
+      "alt": "Chicken tikka and kebabs on the grill",
+      "publicPath": "/images/bbq/bbq-grill-01.jpg"
+    },
+    {
+      "out": "bbq-food-01.jpg",
+      "clip": "IMG_2294",
+      "timeSec": 5.11,
+      "alt": "BBQ buffet with salads and sides",
+      "publicPath": "/images/bbq/bbq-food-01.jpg"
+    },
+    {
+      "out": "bbq-guests-01.jpg",
+      "clip": "IMG_2285",
+      "timeSec": 5.35,
+      "alt": "Chef serving guests at the BBQ",
+      "publicPath": "/images/bbq/bbq-guests-01.jpg"
+    },
+    {
+      "out": "bbq-chef-01.jpg",
+      "clip": "IMG_2295",
+      "timeSec": 9.58,
+      "alt": "Chef Devang at the grill",
+      "publicPath": "/images/bbq/bbq-chef-01.jpg"
+    },
+    {
+      "out": "bbq-atmosphere-01.jpg",
+      "clip": "IMG_2306",
+      "timeSec": 4.01,
+      "alt": "Multi-generational garden party",
+      "publicPath": "/images/bbq/bbq-atmosphere-01.jpg"
+    },
+    {
+      "out": "bbq-prep-01.jpg",
+      "clip": "IMG_2311",
+      "timeSec": 4.38,
+      "alt": "Live cooking at the BBQ station",
+      "publicPath": "/images/bbq/bbq-prep-01.jpg"
+    }
+  ]
+}

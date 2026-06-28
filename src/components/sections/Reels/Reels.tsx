@@ -8,10 +8,10 @@ export function Reels() {
     <section className={`section ${styles.reels}`}>
       <div className="container">
         <div className={styles.header}>
-          <SectionLabel>Follow Our Journey</SectionLabel>
-          <SectionHeading as="h2">Behind The Scenes</SectionHeading>
+          <SectionLabel>Instagram Reels</SectionLabel>
+          <SectionHeading as="h2">Latest From Instagram</SectionHeading>
           <p className={styles.subtitle}>
-            Watch our culinary creations come to life on Instagram
+            Follow our journey and behind the scenes moments.
           </p>
         </div>
         <div className={styles.scroll}>

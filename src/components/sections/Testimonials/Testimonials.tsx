@@ -14,7 +14,7 @@ export function Testimonials() {
   }
 
   return (
-    <section className={`section ${styles.testimonials}`} id="testimonials">
+    <section className={`section section-light ${styles.testimonials}`} id="testimonials">
       <div className="container">
         <div className={styles.header}>
           <SectionLabel>Testimonials</SectionLabel>

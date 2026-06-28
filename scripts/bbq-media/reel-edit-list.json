@@ -1,0 +1,118 @@
+{
+  "title": "Summer BBQ Party — 55s Instagram Reel (9:16)",
+  "targetDurationSec": 55,
+  "exportSettings": {
+    "width": 1080,
+    "height": 1920,
+    "aspectRatio": "9:16",
+    "fps": 30
+  },
+  "sourceFolder": "C:\\Users\\utsav\\Downloads\\BBQ 28.06.2026-20260628T183450Z-3-002\\BBQ 28.06.2026",
+  "segments": [
+    {
+      "order": 1,
+      "label": "Hook — grill money shot",
+      "clip": "IMG_2307.MOV",
+      "inSec": 4,
+      "outSec": 7,
+      "durationSec": 3,
+      "notes": "Open on sizzling skewers and smoke; vertical crop centred on grill"
+    },
+    {
+      "order": 2,
+      "label": "Scene-set — garden setup",
+      "clip": "IMG_2272.MOV",
+      "inSec": 1,
+      "outSec": 6,
+      "durationSec": 5,
+      "notes": "Wide marquee, grill and guests arriving"
+    },
+    {
+      "order": 3,
+      "label": "Prep — live cooking",
+      "clip": "IMG_2311.MOV",
+      "inSec": 2,
+      "outSec": 8,
+      "durationSec": 6,
+      "notes": "Fries, corn on cob and kebabs on the station"
+    },
+    {
+      "order": 4,
+      "label": "Grill action — chef at work",
+      "clip": "IMG_2295.MOV",
+      "inSec": 6,
+      "outSec": 14,
+      "durationSec": 8,
+      "notes": "Chef Devang branding visible; seekh kebabs and chicken tikka"
+    },
+    {
+      "order": 5,
+      "label": "Food beauty — buffet spread",
+      "clip": "IMG_2294.MOV",
+      "inSec": 3,
+      "outSec": 10,
+      "durationSec": 7,
+      "notes": "Salads, fries and grilled skewers on the table"
+    },
+    {
+      "order": 6,
+      "label": "Social energy — serving guests",
+      "clip": "IMG_2285.MOV",
+      "inSec": 3,
+      "outSec": 11,
+      "durationSec": 8,
+      "notes": "Chef plating paneer skewers for a guest"
+    },
+    {
+      "order": 7,
+      "label": "Montage cut 1 — community",
+      "clip": "IMG_2306.MOV",
+      "inSec": 2,
+      "outSec": 5,
+      "durationSec": 3,
+      "notes": "Multi-generational crowd on the lawn"
+    },
+    {
+      "order": 8,
+      "label": "Montage cut 2 — grill close-up",
+      "clip": "IMG_2307.MOV",
+      "inSec": 9,
+      "outSec": 13,
+      "durationSec": 4,
+      "notes": "Tongs turning chicken; keep motion steady"
+    },
+    {
+      "order": 9,
+      "label": "Montage cut 3 — menu branding",
+      "clip": "IMG_2294.MOV",
+      "inSec": 9,
+      "outSec": 12,
+      "durationSec": 3,
+      "notes": "Summer BBQ Party menu card — quick flash"
+    },
+    {
+      "order": 10,
+      "label": "Montage cut 4 — guests eating",
+      "clip": "IMG_2277.MOV",
+      "inSec": 8,
+      "outSec": 12,
+      "durationSec": 4,
+      "notes": "Pick steadiest guest reaction shot in this range"
+    },
+    {
+      "order": 11,
+      "label": "Outro — wide celebration",
+      "clip": "IMG_2272.MOV",
+      "inSec": 6,
+      "outSec": 10,
+      "durationSec": 4,
+      "notes": "Hold on garden party wide; fade to Dine With Devang end card"
+    }
+  ],
+  "totalPlannedDurationSec": 55,
+  "editNotes": [
+    "Cut on beat every 2–3s in montage section (orders 7–10)",
+    "Prioritise clips with least camera shake",
+    "Add end card: logo + @DineWithDevang + dinewithdevang.com"
+  ]
+}

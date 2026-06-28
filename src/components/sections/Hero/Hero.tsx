@@ -1,4 +1,4 @@
-import { Button } from '../../ui'
+import { Link } from 'react-router-dom'
 import { PlayIcon } from '../../../assets/icons'
 import { IMAGES } from '../../../data'
 import styles from './Hero.module.css'
@@ -26,9 +26,9 @@ export function Hero() {
           Crafted in Your Home or Venue.
         </p>
         <div className={styles.ctas}>
-          <Button asChild href="#contact" variant="primary">
+          <Link to="/contact" className="btn btn-primary">
             Get Your Custom Menu
-          </Button>
+          </Link>
           <button type="button" className={styles.watchBtn}>
             <PlayIcon className={styles.playIcon} />
             Watch Our Story
